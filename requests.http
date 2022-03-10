@@ -1,1 +1,21 @@
 GET http://localhost:3000/list_actors
+
+###
+
+GET http://localhost:3000/list_movies
+
+###
+
+GET http://localhost:3000/search?id=2
+
+###
+
+GET http://localhost:3000/random_movie
+
+###
+
+GET http://localhost:3000/by_letter?l=A
+
+###
+
+GET http://localhost:3000/search/titANIC
