@@ -1,21 +1,58 @@
-GET http://localhost:3000/list_actors
+### FOR MOVIES ###
 
+GET http://localhost:3000/movies
+###
+POST http://localhost:3000/movies
+content-type: application/json
+
+{
+  "title": "test",
+  "year": 1420,
+  "plot": "test"
+}
+###
+GET http://localhost:3000/movies/1
+###
+PATCH http://localhost:3000/movies/7
+content-type: application/json
+
+{
+  "title": "new",
+  "plot": "new"
+}
+###
+DELETE http://localhost:3000/movies/6
 ###
 
-GET http://localhost:3000/list_movies
+# ###
+# GET http://localhost:3000/random_movie
+# ###
+# GET http://localhost:3000/by_letter?l=A
+# ###
+# GET http://localhost:3000/search/titANIC
+# ###
 
+### FOR ACTORS ###
+
+GET http://localhost:3000/actors
 ###
+POST http://localhost:3000/actors
+content-type: application/json
 
-GET http://localhost:3000/search?id=2
-
+{
+  "first_name": "test",
+  "last_name": "test",
+  "known_for": "test"
+}
 ###
-
-GET http://localhost:3000/random_movie
-
+GET http://localhost:3000/actors/1
 ###
+PATCH http://localhost:3000/actors/16
+content-type: application/json
 
-GET http://localhost:3000/by_letter?l=A
-
+{
+  "known_for": "something, probably"
+}
 ###
-
-GET http://localhost:3000/search/titANIC
+DELETE http://localhost:3000/actors/16
+###
