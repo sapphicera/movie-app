@@ -13,12 +13,14 @@ content-type: application/json
 ###
 GET http://localhost:3000/movies/1
 ###
-PATCH http://localhost:3000/movies/7
+PATCH http://localhost:3000/movies/29
 content-type: application/json
 
 {
-  "title": "new",
-  "plot": "new"
+  "title": "edited",
+  "plot": "edited",
+  "director": "me",
+  "english": "false"
 }
 ###
 DELETE http://localhost:3000/movies/6
@@ -42,16 +44,20 @@ content-type: application/json
 {
   "first_name": "test",
   "last_name": "test",
-  "known_for": "test"
+  "known_for": "test",
+  "age": 24,
+  "gender": "feMale"
 }
 ###
-GET http://localhost:3000/actors/1
+GET http://localhost:3000/actors/9
 ###
-PATCH http://localhost:3000/actors/16
+PATCH http://localhost:3000/actors/12
 content-type: application/json
 
 {
-  "known_for": "something, probably"
+  "known_for": "something, probably",
+  "age": 66,
+  "gender": "maLE"
 }
 ###
 DELETE http://localhost:3000/actors/16
