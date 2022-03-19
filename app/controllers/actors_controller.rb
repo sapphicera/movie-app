@@ -5,14 +5,19 @@ class ActorsController < ApplicationController
   end
 
   def create
-    actor = Actor.create(
+    actor = Actor.new(
       first_name: params[:first_name],
       last_name: params[:last_name],
       known_for: params[:known_for],
       age: params[:age],
       gender: params[:gender].capitalize
     )
-    render json: {message: "actor created!"}
+
+    if actor.save
+      render json: {message: "actor created!"}
+    else
+      render json: {errors: actor.errors.full_messages}, status: 422
+    end
   end
 
   def show
@@ -29,9 +34,11 @@ class ActorsController < ApplicationController
     actor.age = params[:age] || actor.age
     actor.gender = params[:gender].capitalize || actor.gender
 
-    actor.save
-
-    render json: {message: "actor updated!"}
+    if actor.save
+      render json: {message: "actor updated!"}
+    else
+      render json: {errors: actor.errors.full_messages}, status: 422
+    end
   end
 
   def delete

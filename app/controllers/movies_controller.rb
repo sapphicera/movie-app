@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
   end
 
   def create
-    movie = Movie.create(
+    movie = Movie.new(
       title: params[:title],
       year: params[:year],
       plot: params[:plot],
@@ -13,7 +13,11 @@ class MoviesController < ApplicationController
       english: params[:english] || true
     )
 
-    render json: {message: "movie created!"}
+    if movie.save
+      render json: {message: "movie saved!"}
+    else
+      render json: {errors: movie.errors.full_messages}, status: 422
+    end
   end
 
   def show
@@ -30,9 +34,11 @@ class MoviesController < ApplicationController
     movie.director = params[:director] || movie.director
     movie.english = params[:english] || movie.english
 
-    movie.save
-
-    render json: {message: "movie updated!"}
+    if movie.save
+      render json: {message: "movie updated!"}
+    else
+      render json: {errors: movie.errors.full_messages}, status: 422
+    end
   end
 
   def delete
