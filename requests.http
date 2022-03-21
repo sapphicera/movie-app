@@ -35,9 +35,9 @@ DELETE http://localhost:3000/movies/30
 
 ### FOR ACTORS ###
 
-GET http://localhost:3000/actors
+GET http://localhost:3000/actors.json
 ###
-POST http://localhost:3000/actors
+POST http://localhost:3000/actors.json
 content-type: application/json
 
 {
@@ -45,18 +45,20 @@ content-type: application/json
   "last_name": "test",
   "known_for": "test",
   "age": 14,
-  "gender": "feMale"
+  "gender": "feMale",
+  "movie_id": 26
 }
 ###
-GET http://localhost:3000/actors/9
+GET http://localhost:3000/actors/15.json
 ###
-PATCH http://localhost:3000/actors/12
+PATCH http://localhost:3000/actors/15.json
 content-type: application/json
 
 {
   "known_for": "something, probably",
   "age": 16,
-  "gender": "maLE"
+  "gender": "maLE",
+  "movie_id": 27
 }
 ###
 DELETE http://localhost:3000/actors/16

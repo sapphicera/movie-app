@@ -1,0 +1,11 @@
+{
+  id: @actor.id,
+  first_name: @actor.first_name,
+  last_name: @actor.last_name,
+  known_for: @actor.known_for,
+  movie_id: @actor.movie_id,
+  movie_name: @actor.movie.title,
+  movie_plot: @actor.movie.plot,
+  created_at: @actor.created_at,
+  updated_at: @actor.updated_at
+}
