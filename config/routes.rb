@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   get "/actors/:id" => "actors#show"
   patch "/actors/:id" => "actors#update"
   delete "/actors/:id" => "actors#delete"
+
+  # for movie genres
+  post "/movie_genres" => "movie_genres#create"
 end
