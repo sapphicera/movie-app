@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.3"
 
+# adds bcrypt (pass protection) and jwt (json web tokens)
+gem 'jwt'
+gem 'bcrypt', '~> 3.1.7'
+
 # adds faker gem
 gem 'ffaker'
 
