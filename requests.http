@@ -1,8 +1,10 @@
 ### FOR MOVIES ###
 
 GET http://localhost:3000/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
 ###
 POST http://localhost:3000/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
 content-type: application/json
 
 {
@@ -13,8 +15,10 @@ content-type: application/json
 }
 ###
 GET http://localhost:3000/movies/31
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
 ###
 PATCH http://localhost:3000/movies/31
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
 content-type: application/json
 
 {
@@ -23,6 +27,7 @@ content-type: application/json
 }
 ###
 DELETE http://localhost:3000/movies/30
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
 ###
 
 # ###
@@ -38,6 +43,7 @@ DELETE http://localhost:3000/movies/30
 GET http://localhost:3000/actors.json
 ###
 POST http://localhost:3000/actors.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
 content-type: application/json
 
 {
@@ -50,8 +56,10 @@ content-type: application/json
 }
 ###
 GET http://localhost:3000/actors/15.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
 ###
 PATCH http://localhost:3000/actors/15.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
 content-type: application/json
 
 {
@@ -61,20 +69,29 @@ content-type: application/json
   "movie_id": 27
 }
 ###
-DELETE http://localhost:3000/actors/16
+DELETE http://localhost:3000/actors/15
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
+###
 
-### Users create (signup)
+### FOR USERS ###
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
+# {
+#   "name": "Test name",
+#   "email": "test@test.com",
+#   "password": "password",
+#   "password_confirmation": "password"
+# }
+
 {
-  "name": "Test name",
-  "email": "test@test.com",
-  "password": "password",
-  "password_confirmation": "password"
+  "name": "origa",
+  "email": "origa@grams.com",
+  "password": "auspex",
+  "password_confirmation": "auspex"
 }
 
-### Sessions create (login)
+###
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
@@ -82,3 +99,10 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+# {
+#   "email": "origa@grams.com",
+#   "password": "auspex"
+# }
+
+###
