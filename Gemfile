@@ -7,6 +7,9 @@ ruby "3.0.3"
 gem 'jwt'
 gem 'bcrypt', '~> 3.1.7'
 
+# adds serializer
+gem 'active_model_serializers'
+
 # adds faker gem
 gem 'ffaker'
 

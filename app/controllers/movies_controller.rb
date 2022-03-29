@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
   def index
     movies = Movie.all
-    render json: movies.as_json
+    render json: movies
   end
 
   def create

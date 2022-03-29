@@ -1,6 +1,6 @@
 ### FOR MOVIES ###
 
-GET http://localhost:3000/movies
+GET http://localhost:3000/movies.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
 ###
 POST http://localhost:3000/movies
