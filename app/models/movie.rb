@@ -5,4 +5,7 @@ class Movie < ApplicationRecord
   validates :year, numericality: { in: 1878..2022 }
 
   has_many :actors
+
+  has_many :movie_genres
+  has_many :genres, through: :movie_genres
 end
