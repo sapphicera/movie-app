@@ -1,21 +1,21 @@
 ### FOR MOVIES ###
 
 GET http://localhost:3000/movies.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDkzNTkyOTJ9.Uw7FilUO-SEiyyI5yjF5o4kegkiboQAo5FMWZSp3OwE
 ###
 POST http://localhost:3000/movies
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDkzNTkyOTJ9.Uw7FilUO-SEiyyI5yjF5o4kegkiboQAo5FMWZSp3OwE
 content-type: application/json
 
 {
-  "title": "test",
+  "title": "squeaker2",
   "year": 1880,
   "plot": "test",
   "director": "hellaur"
 }
 ###
-GET http://localhost:3000/movies/31
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
+GET http://localhost:3000/movies/33
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDkzNTkyOTJ9.Uw7FilUO-SEiyyI5yjF5o4kegkiboQAo5FMWZSp3OwE
 ###
 PATCH http://localhost:3000/movies/31
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
@@ -43,7 +43,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3N
 GET http://localhost:3000/actors.json
 ###
 POST http://localhost:3000/actors.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2MDY3Njl9.mHCrxPS0igqHgsJ7LZ1SgKZ8IpdPWbvaNYBQJ2B3C5o
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDkzNTkyMjl9.AsZPYVZViTeRCbt3_pZzyUpC8EaS7VBhStG0XBJOHr0
 content-type: application/json
 
 {
@@ -95,15 +95,15 @@ Content-Type: application/json
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
-{
-  "email": "test@test.com",
-  "password": "password"
-}
-
 # {
-#   "email": "origa@grams.com",
-#   "password": "auspex"
+#   "email": "test@test.com",
+#   "password": "password"
 # }
+
+{
+  "email": "origa@grams.com",
+  "password": "auspex"
+}
 
 ###
 
